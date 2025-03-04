@@ -1,0 +1,89 @@
+.community-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+ /* In your Community.css file */
+
+/* Style for the image container to maintain a good aspect ratio */
+.community-slider .slick-slide {
+  position: relative;
+  width: 50%; /* Set width to 80% of the parent container or adjust as needed */
+  margin: 0 auto; /* Center the slider horizontally */
+  overflow: hidden; /* Hide the overflow of images */
+}
+
+.community-slider .slick-slide img {
+  width: 100%; /* Ensure images take up the full width of their container */
+  height: 400px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border-radius: 8px; /* Optional: Add rounded corners to the images */
+}
+
+/* Make sure the navigation arrows are visible on top of the images */
+.slick-prev, .slick-next {
+  z-index: 1; /* Ensure arrows are above the images */
+  color: white; /* Make arrows white for better contrast */
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 30px; /* Increase arrow size for better visibility */
+}
+
+/* Style the dots */
+.slick-dots {
+  bottom: 10px; /* Position the dots lower */
+}
+
+.slick-dots li button:before {
+  font-size: 12px; /* Make the dots smaller */
+  color: white; /* Change dot color to white */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffcc00; /* Highlight the active dot */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .community-slider .slick-slide {
+    width: 90%; /* Make the slider take up 90% width on smaller screens */
+  }
+
+  .community-slider .slick-slide img {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+  .team-carousel {
+    padding: 0 10px;
+   
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .community-slider .slick-slide {
+    width: 95%; 
+  }
+
+  .community-slider .slick-slide img {
+    height: 250px; 
+  }
+  .team-carousel{
+    width: 43vh !important;
+  }
+}
+
+  .community-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3f4092;
+    margin-bottom: 20px;
+  }
+  
+  .community-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #34495e;
+  }
+  

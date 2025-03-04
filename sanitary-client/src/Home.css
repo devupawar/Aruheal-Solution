@@ -1,0 +1,60 @@
+.img{
+    width: 35vw;
+}
+.hlogo-img {
+    width: 8vw; /* Default width */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 576px) {
+    .hlogo-img {
+        width: 22vw; /* Increase size on small screens */
+    }
+}
+
+.rectangle{
+    border-radius: 50%;
+    height: 2vh;
+}
+.card-img{
+    height: 13vw;
+    width: 15vw;
+    object-fit: cover;
+    margin-bottom: 1vw;
+}
+.card2-img{
+    height: 13vw;
+    width: 15vw;
+    object-fit: cover;
+    margin-bottom: 1vw;
+}
+.card3-img{
+    height: 13vw;
+    width: 12vw;
+    margin-bottom: 1vw;
+    object-fit: cover;
+}
+@media (max-width: 576px) {
+    .col-lg-4 {
+        flex: 0 0 100%; /* Make columns full-width on small screens */
+        max-width: 100%; /* Ensure columns take full width */
+    }
+    
+    .card-img, .card2-img, .card3-img {
+        height: 30vw; /* Set height based on viewport width */
+        width: auto; /* Let width adjust automatically */
+    }
+
+    .rectangle {
+        height: auto; /* Ensure the rectangle maintains its aspect ratio */
+    }
+    .img{
+        width: 40vh;
+        margin-left: 10px;
+    }
+    .logo-img{
+        margin-top: -1.4vh;
+        height: 9vh;
+        width: 20vh;
+    }
+}

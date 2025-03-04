@@ -1,0 +1,250 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+.awards-section {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.awards-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #3f4092;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Display two awards per row */
+  gap: 20px;
+}
+
+.award-card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-height: 500px;
+}
+
+.award-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  max-height: 350px;
+}
+
+.award-title {
+  font-size: 1.2rem;
+  color: #3f4092;
+  margin-bottom: 10px;
+}
+
+.award-year {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.award-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Media query for mobile responsiveness */
+/* Awards Section - Mobile Styles */
+@media (max-width: 768px) {
+  .awards-title{
+    font-size: 1.5rem;
+  }
+  .awards-grid {
+    grid-template-columns: 1fr; /* Display one award per row on smaller screens */
+    gap: 20px; /* Add some spacing between award cards */
+    padding: 0 10px; /* Ensure some padding inside the grid */
+  }
+
+  .award-card {
+    width: 100%; /* Make the award card take the full width on smaller screens */
+    margin: 0 auto; /* Center the award card */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+/* Blogs Section Styles */
+.blogs-container {
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fafafa;
+}
+
+.blogs-header {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.blog-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.blog-item:hover {
+  transform: translateY(-5px);
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  color: #3f4092;
+  margin-bottom: 10px;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.blog-summary {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Mobile Responsiveness for Blogs Section */
+@media (max-width: 768px) {
+  .blogs-grid {
+    grid-template-columns: 1fr; /* Ensure blogs are stacked in a single column on smaller screens */
+    padding: 0 20px; /* Add padding to the grid */
+  }
+
+  .blog-item {
+    padding: 15px;
+    margin-bottom: 20px; /* Add some space between blog items */
+  }
+
+  .blog-title {
+    font-size: 1.2rem; /* Adjust title font size for mobile */
+  }
+
+  .blog-summary {
+    font-size: 0.9rem; /* Adjust summary font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .blogs-header {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .blogs-grid {
+    gap: 15px; /* Reduce gap between blog items */
+  }
+
+  .blog-item {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+
+  .blog-title {
+    font-size: 1.1rem;
+  }
+
+  .blog-summary {
+    font-size: 0.85rem;
+  }
+}
+
+/* Container for the FAQ section */
+.faq-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the FAQ header */
+  .faq-header {
+    font-size: 2rem;
+    color: #3f4092;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Accordion Header styles */
+  .accordion-button {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #fff !important;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: #3f4092;
+    background-color: #ffffff !important;
+    border-radius: 5px;
+  }
+  
+  /* Styling for Accordion body */
+  .accordion-body {
+    background-color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 20px;
+  }
+  
+  /* Hover effect for the Accordion button */
+  .accordion-button:hover {
+    background-color: white!important;
+  }
+  
+  /* Additional styling for responsiveness */
+  @media (max-width: 768px) {
+    .faq-section {
+      padding: 10px;
+    }
+  
+    .faq-header {
+      font-size: 1.5rem;
+    }
+  
+    .accordion-button {
+      font-size: 1rem;
+    }
+  
+    .accordion-body {
+      font-size: 0.9rem;
+      padding: 15px;
+    }
+  }
+  

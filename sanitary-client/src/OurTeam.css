@@ -1,0 +1,200 @@
+/* Overall Section Styles */
+.our-team-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  max-width: 100%; /* Ensures it doesn't exceed screen width */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #27ae60; /* A green highlight */
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+/* Directors Section */
+.directors-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  max-width: 100%; /* Prevents overflowing */
+}
+
+.director-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  max-width: 500px !important;
+  flex: 1 1 100%; 
+}
+
+.director-card:hover {
+  transform: translateY(-10px);
+}
+
+.director-image {
+  width: 150vw !important;
+  max-width: 100%; /* Ensures image fits within container */
+  height: 50vh;
+  object-fit: cover; /* Ensures image scales properly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.director-card h3 {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #555;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Team Carousel */
+.team-carousel {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; /* Adds padding to ensure it doesn't overflow */
+  box-sizing: border-box;
+}
+
+.team-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.team-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 500px; /* Ensures proper height on larger screens */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-image:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel Dots Customization */
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #333;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #27ae60; /* Matches the green highlight color */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px;
+  color: #27ae60;
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .our-team-section {
+    padding: 40px 15px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .directors-container {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .director-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    flex: none;
+  }
+
+  .director-image {
+    height: 250px;
+   
+  }
+
+  .team-image {
+    height: 300px;
+  }
+
+  /* Adjust carousel width */
+  .team-carousel {
+    padding: 0 10px;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .directors-container {
+    gap: 15px;
+    padding: 3vh;
+    margin-left: -5vh;
+ 
+   
+  }
+
+  .director-card {
+    padding: 15px;
+   width: 40vh !important;
+   margin-left: 5vh;
+    
+   
+  }
+
+  .director-image {
+    height:40vh ;
+    width: 50vh !important;
+    object-fit: cover;
+   
+  }
+
+  .team-image {
+    height: 250px;
+  }
+
+  /* Adjust carousel padding */
+  .team-carousel {
+    padding: 0 5px;
+    max-width: 100%;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 24px;
+  }
+}
