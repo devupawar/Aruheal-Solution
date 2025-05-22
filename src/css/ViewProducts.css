@@ -1,0 +1,106 @@
+.view-products-container {
+  padding: 20px;
+}
+
+.product-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 3vw;
+}
+
+.product-card {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  width: calc(25% - 10px); /* 4 cards in a row */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Softer shadow */
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 25vw; /* Set a maximum height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced hover shadow */
+}
+
+.product-image {
+  width: 100%;
+  height: 200px; /* Reduced height for a smaller image */
+  object-fit: cover; /* Crop the image for a professional look */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-details {
+  text-align: center;
+}
+
+.product-details h3 {
+  font-size: 1.1rem; /* Slightly smaller font size */
+  font-weight: 600; /* Bolder font */
+  margin-bottom: 5px;
+}
+
+.product-details p {
+  font-size: 0.9rem; /* Reduced font size for product info */
+  color: #555;
+}
+
+.update-button,
+.delete-button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem; /* Slightly smaller buttons */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.update-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.update-button:hover {
+  background-color: #0056b3; /* Darker hover color */
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333; /* Darker hover color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 10px); /* 2 cards in a row on tablets */
+    height: 250px; /* Reduced height for smaller screens */
+  }
+
+  .product-image {
+    height: 120px; /* Adjusted image height */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 100%; /* 1 card in a row on mobile */
+    margin: 5px 0;
+    height: 220px; /* Further reduce height */
+  }
+
+  .product-image {
+    height: 100px; /* Smaller image for mobile */
+  }
+}
